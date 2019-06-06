@@ -43,7 +43,7 @@ def handle_message(event):
         r = 'hello'
     line_bot_apie.reply_messag(
         event.reply_token,
-        TextSendMessage(text='r'))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
