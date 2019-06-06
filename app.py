@@ -37,10 +37,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text #使用者傳的訊息
+    msg = event.message.text 
     line_bot_apie.reply_messag(
         event.reply_token,
-        TextSendMessage(text=msg))
+        TextSendMessage(text='123456'))
 
 
 if __name__ == "__main__":
