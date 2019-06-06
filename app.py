@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     r = 'hi'
 
-    if msg == ['hi', 'Hi', '你好']:
+    if msg in ['hi', 'Hi', '你好']:
         r = '你好~今天運動沒'
     elif msg == '我想運動':
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
