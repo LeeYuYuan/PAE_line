@@ -39,7 +39,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text #使用者傳的訊息
     r = '看不懂' #預設訊息
-    if msg == 'hi' or '你好':
+    if msg == 'hi' :
         r = 'hello'
     line_bot_apie.reply_messag(
         event.reply_token,
