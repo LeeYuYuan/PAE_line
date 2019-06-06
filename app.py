@@ -38,12 +38,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text #使用者傳的訊息
-    r = '看不懂' #預設訊息
-    if msg == 'hi' :
-        r = 'hello'
     line_bot_apie.reply_messag(
         event.reply_token,
-        TextSendMessage(text=r))
+        TextSendMessage(text=msg))
 
 
 if __name__ == "__main__":
