@@ -42,8 +42,11 @@ def handle_message(event):
 
     if msg in ['hi', 'Hi', '你好']:
         r = '你好~今天運動沒'
-    elif msg == '我想運動':
+        if msg in ['還沒', '等等就去', '今天有點懶', '不想運動', '明天再去']:
+            r = '不要偷懶啦!!!!快去運動吧'
+    elif msg in ['我想運動', '好想運動啊!', '好想運動']:
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
+    
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
