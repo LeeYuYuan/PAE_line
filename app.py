@@ -40,7 +40,12 @@ def handle_message(event):
     msg = event.message.text
     r = 'hi'
 
-    if '好懶喔' in msg:
+
+
+    if msg in ['hi', 'Hi', '你好']:
+        r = '你好~今天運動沒'
+    elif msg in ['還沒', '等等就去', '今天有點懶', '不想運動', '明天再去']:
+        r = '不要偷懶啦!!!!快去運動吧'
         sticker_message = StickerSendMessage(
             package_id='11539',
             sticker_id='52114142'
@@ -49,18 +54,8 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             sticker_message) 
-        
-        msg = event.message.text
-        r = '快去運動' 
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=r))
-        return
 
-    if msg in ['hi', 'Hi', '你好']:
-        r = '你好~今天運動沒'
-    elif msg in ['還沒', '等等就去', '今天有點懶', '不想運動', '明天再去']:
-        r = '不要偷懶啦!!!!快去運動吧'
+        return
     elif msg in ['我想運動', '好想運動啊!', '好想運動']:
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
     elif msg in ['怎麼聯絡你們?', '我想找客服', '我要投訴']:
