@@ -55,7 +55,6 @@ def handle_message(event):
             event.reply_token,
             sticker_message) 
 
-        return
     elif msg in ['我想運動', '好想運動啊!', '好想運動']:
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
     elif msg in ['怎麼聯絡你們?', '我想找客服', '我要投訴']:
