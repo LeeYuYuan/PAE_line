@@ -69,7 +69,14 @@ def handle_message(event):
         r = '想聊點什麼嗎~'
     elif '問題' in msg:
         r = '點我~' + '\n' + 'https://paendless.wixsite.com/sharer/blank-2'
-
+    elif '訓練' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of'
+    elif '營養' in msg:
+         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-5'
+    elif '治療', '醫學', '復健' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
+    elif '籃球', '比賽', '奧運', '時事', 'nba', 'hbl', 'NBA', 'HBL', 'MLB', 'mlb' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-32'
     
     line_bot_api.reply_message(
         event.reply_token,
