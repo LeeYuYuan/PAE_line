@@ -57,17 +57,7 @@ def handle_message(event):
         r = '你好~今天運動沒'
 
     elif msg in ['還沒', '等等就去', '今天有點懶', '不想運動', '明天再去']:
-        count = count + 1
-        sticker_message = StickerSendMessage(
-            package_id='11539',
-            sticker_id='52114142'
-        )
-
-        line_bot_api.reply_message(
-            event.reply_token,
-            sticker_message) 
-        if count == 3:
-            r = '不要偷懶啦!!!!快去運動吧'
+        r = '不要偷懶啦!!!!快去運動吧'
 
     elif msg in ['我想運動', '好想運動啊!', '好想運動']:
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
@@ -77,6 +67,8 @@ def handle_message(event):
         r = '點我~' + '\n' + 'https://paendless.wixsite.com/mysite/writer'
     elif msg in ['我今天心情不好', '陪我聊天', '覺得無聊']:
         r = '想聊點什麼嗎~'
+    elif '問題' in msg:
+        r = '點我~' + '\n' + 'https://paendless.wixsite.com/sharer/blank-2'
 
     
     line_bot_api.reply_message(
