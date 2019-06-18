@@ -75,8 +75,7 @@ def handle_message(event):
          r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-5'
     elif '治療' or '醫學' or '復健' in msg:
         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
-    elif '籃球' or '比賽' or '奧運' or '時事' or 'nba' or 'hbl' or 'NBA' or 'HBL' or 'MLB' or 'mlb' in msg:
-        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-32'
+
     
     line_bot_api.reply_message(
         event.reply_token,
