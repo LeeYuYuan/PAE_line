@@ -73,7 +73,7 @@ def handle_message(event):
         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of'
     elif '營養' in msg:
          r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-5'
-    elif '治療' in msg:
+    elif '治療', '復健' in msg:
         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
 
     
