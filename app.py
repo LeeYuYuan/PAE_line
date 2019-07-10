@@ -53,17 +53,24 @@ def handle_message(event):
         return
 
     count = 0
-    if msg in ['hi', 'Hi', '你好']:
+    if 'hi' in msg:
         r = '你好~今天運動沒'
-
-    elif msg in ['還沒', '等等就去', '今天有點懶', '不想運動', '明天再去']:
+    elif 'Hi' in msg:
+        r = '你好~今天運動沒'    
+    elif '妳好' in msg:
+        r = '您好~今天運動沒'
+    elif '不想運動' in msg:
+        r = '快去運動RRRRR'
+    elif '懶' in msg:
         r = '不要偷懶啦!!!!快去運動吧'
 
-    elif msg in ['我想運動', '好想運動啊!', '好想運動']:
+    elif '想運動' in msg:
         r = '快來看看新的運動資訊' + '\n' + 'https://paendless.wixsite.com/mysite/blog'
-    elif msg in ['怎麼聯絡你們?', '我想找客服', '我要投訴']:
+    elif '聯絡' in msg:
         r = '點我~' + '\n' + 'https://paendless.wixsite.com/mysite/blank-1'
-    elif msg in ['我想成為分享者']:
+    elif '投訴' in msg:
+        r = '點我~' + '\n' + 'https://paendless.wixsite.com/mysite/blank-1'
+    elif '分享者' in msg:
         r = '點我~' + '\n' + 'https://paendless.wixsite.com/mysite/writer'
     elif msg in ['我今天心情不好', '陪我聊天', '覺得無聊']:
         r = '想聊點什麼嗎~'
@@ -75,6 +82,23 @@ def handle_message(event):
          r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-5'
     elif '治療' in msg:
         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
+    elif '復健' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
+    elif '酸' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
+    elif '痛' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/copy-of-2'
+    elif '增肌' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/blank-3'
+    elif '減肥' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/blank-8'
+    elif '減脂' in msg:
+        r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/blank-8'
+    elif '碩文' in msg:
+        r = '超肥!~~~'
+    elif '佩蓉' in msg:
+        r = '漂釀~~漂釀~~'
+
 
     
     line_bot_api.reply_message(
