@@ -95,9 +95,14 @@ def handle_message(event):
     elif '減脂' in msg:
         r = '點我~' + '\n' +'https://paendless.wixsite.com/mysite/blank-8'
     elif '碩文' in msg:
-        r = '超肥!~~~'
+        r = '超肥!~~~小雞雞'
     elif '佩蓉' in msg:
         r = '漂釀~~漂釀~~'
+    elif '冠綸' in msg:
+        r = '阿喲!~重訓有成喔小雞雞'
+    elif '建宇' in msg:
+        r = '加油點好嗎'
+
 
 
     
